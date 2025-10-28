@@ -1,19 +1,22 @@
 import styled from "styled-components";
+import {FlexWrapper} from "../flexWraper/FlexWrapper.tsx";
 
 export const HeaderMenu = () => {
     return (
-        <Header>
-            <nav>
-                <ul>
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">About Me</a></li>
-                    <li><a href="#">Skills</a></li>
-                    <li><a href="#">Portfolio</a></li>
-                    <li><a href="#">Contacts</a></li>
-                </ul>
-                <BorderDiv/>
-            </nav>
-        </Header>
+        <FlexWrapper>
+            <Header>
+                <nav>
+                    <ul>
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">About Me</a></li>
+                        <li><a href="#">Skills</a></li>
+                        <li><a href="#">Portfolio</a></li>
+                        <li><a href="#">Contacts</a></li>
+                    </ul>
+                    <BorderDiv/>
+                </nav>
+            </Header>
+        </FlexWrapper>
     );
 };
 const Header = styled.header`

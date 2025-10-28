@@ -1,15 +1,14 @@
 import './App.css'
 import {HeaderMenu} from "./layout/header/Header.tsx";
-import {FlexWrapper} from "./layout/flexWraper/FlexWrapper.tsx";
 import {Container} from "./layout/container/Container.tsx";
+import {Main} from "./layout/sections/main/Main.tsx";
 
 
 function App() {
     return (
         <Container>
-            <FlexWrapper>
-                <HeaderMenu/>
-            </FlexWrapper>
+            <HeaderMenu/>
+            <Main/>
         </Container>
     )
 }
