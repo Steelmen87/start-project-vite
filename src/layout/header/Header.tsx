@@ -17,8 +17,6 @@ export const HeaderMenu = () => {
     );
 };
 const Header = styled.header`
-    max-width: 940px;
-
     nav {
         width: 100%;
     }
@@ -28,6 +26,7 @@ const Header = styled.header`
         justify-content: space-between;
         padding-left: 0;
         list-style: none;
+        margin-top: 30px;
     }
 
     nav > ul > li > a {

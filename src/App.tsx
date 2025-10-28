@@ -1,12 +1,16 @@
 import './App.css'
 import {HeaderMenu} from "./layout/header/Header.tsx";
+import {FlexWrapper} from "./layout/flexWraper/FlexWrapper.tsx";
+import {Container} from "./layout/container/Container.tsx";
 
 
 function App() {
     return (
-        <div className="App">
-            <HeaderMenu/>
-        </div>
+        <Container>
+            <FlexWrapper>
+                <HeaderMenu/>
+            </FlexWrapper>
+        </Container>
     )
 }
 
