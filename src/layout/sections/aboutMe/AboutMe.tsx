@@ -1,5 +1,5 @@
 import {FlexWrapper} from "../../flexWraper/FlexWrapper.tsx";
-import styled, {css} from "styled-components";
+import styled from "styled-components";
 
 export const AboutMe = () => {
     return (
