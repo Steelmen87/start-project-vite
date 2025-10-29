@@ -54,7 +54,7 @@ const Content = styled.div`
 
 `
 type imageProps = {
-    img: string | object
+    img: any
 }
 
 const Photo = styled.img<imageProps>`
