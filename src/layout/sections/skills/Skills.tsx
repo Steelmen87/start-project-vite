@@ -46,7 +46,7 @@ const DescriptionSkills = styled(Description)`
 
 `
 type typeImg = {
-    img: string
+    img?: string | undefined
 }
 const Img = styled.img<typeImg>`
     width: 90px;
@@ -73,8 +73,7 @@ const Text = styled.div`
     padding: 20px 0 40px;
 `
 type typeStar = {
-    star: any
-
+    star?: string | undefined
 }
 const Star = styled.img<typeStar>`
     width: 26px;
