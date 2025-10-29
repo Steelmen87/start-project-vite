@@ -73,7 +73,11 @@ const Text = styled.div`
     padding: 20px 0 40px;
 `
 type typeStar = {
+<<<<<<< HEAD
     star: string
+=======
+    star: any
+>>>>>>> origin/main
 }
 const Star = styled.img<typeStar>`
     width: 26px;
