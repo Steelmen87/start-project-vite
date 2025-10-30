@@ -26,7 +26,7 @@ export const Skills = () => {
         countStars: [1, 1, 1, 1, 0]
     },]
     return (
-        <FlexWrapperForAll>
+        <FlexWrapperForAll wrap={"wrap"}>
             <Title>Skills</Title>
             <DescriptionSkills>I work in such programs as</DescriptionSkills>
             <BlockSkills>

@@ -20,16 +20,24 @@ export const AboutMe = () => {
         </StyledMe>
     );
 };
-export const  StyledMe = styled.div`
+type StyledMeType = {
+    flexDirection?: string
+}
+export const StyledMe = styled.div<StyledMeType>`
     display: flex;
     justify-content: center;
     width: 100vw;
+    flex-direction: ${props => props.flexDirection || "row"};
 `
-export const Title = styled.div`
+type TitleProps = {
+    padding?: string
+}
+export const Title = styled.div<TitleProps>`
     font-weight: 400;
     font-size: 34px;
     line-height: 100%;
     text-align: center;
+    padding: ${props => props.padding};
 `
 export const Description = styled.div`
     font-weight: 400;
@@ -43,14 +51,15 @@ export const Description = styled.div`
 
 `
 type FlexWrapperForAll = {
-    flexDirection?:string
+    flexDirection?: string
+    wrap?: string
 }
 export const FlexWrapperForAll = styled(FlexWrapper)<FlexWrapperForAll>`
     //background-color: rgba(246, 246, 246, 1);
     display: flex;
-   flex-direction: column;
-    
-    
+    flex-direction: column;
+    flex-wrap: ${props => props.wrap || "nowrap"};
+
     align-items: center;
     padding: 120px 0 100px 0;
 

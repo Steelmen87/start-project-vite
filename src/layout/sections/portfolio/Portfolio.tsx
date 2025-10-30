@@ -1,0 +1,66 @@
+import {StyledMe, Title} from "../aboutMe/AboutMe.tsx";
+import styled from "styled-components";
+import workOne from "../../../assets/images/work1.jpg"
+import reebok_web from "../../../assets/images/reebok_web.png"
+import cam from "../../../assets/images/photoCam.png"
+
+export const Portfolio = () => {
+    const works = [
+        {
+            img: workOne,
+            description: "Online fashion store - Homepage"
+        },
+        {
+            img: reebok_web,
+            description: "Reebok Store - Concept"
+        },
+        {
+            img: cam,
+            description: "Braun Landing Page - Concept"
+        },
+    ]
+    return (
+        <StyledMe flexDirection={"column"}>
+            <Title padding={"110px 0px 50px 0px"}>Portfolio</Title>
+            {works.map((work, index) => {
+                return <WorkProject key={index}>
+                    <Image img={work.img}/>
+                    <Description>
+                        {work.description}
+                    </Description>
+                </WorkProject>
+            })}
+        </StyledMe>
+    );
+};
+
+const WorkProject = styled.div`
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 100px;
+`
+const Description = styled.div`
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 100%;
+    text-decoration: underline;
+    text-decoration-style: solid;
+    text-decoration-thickness: 0;
+
+`
+type ImageType = {
+    img: any
+}
+const Image = styled.img<ImageType>`
+    background-image: url(${props => props.img});
+
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: block;
+    max-width: 940px;
+    height: 510px;
+    width: 100%;
+    margin-bottom: 44px;
+`
