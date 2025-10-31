@@ -24,7 +24,7 @@ export const Portfolio = () => {
             <Title padding={"110px 0px 50px 0px"}>Portfolio</Title>
             {works.map((work, index) => {
                 return <WorkProject key={index}>
-                    <Image img={work.img}/>
+                    <Image src={work.img}/>
                     <Description>
                         {work.description}
                     </Description>
@@ -41,10 +41,6 @@ const WorkProject = styled.div`
     width: 100%;
     max-width: 940px;
     margin-bottom: 100px;
-   /* @media screen and (max-width: 440px) {
-        
-    }*/
-
 `
 const Description = styled.div`
     font-weight: 400;
@@ -54,14 +50,9 @@ const Description = styled.div`
     text-decoration-style: solid;
     text-decoration-thickness: 0;
 `
-type ImageType = {
-    img: any
-}
-const Image = styled.img<ImageType>`
-    background-image: url(${props => props.img});
-    background-repeat: no-repeat;
-    background-size: cover;
-    
+
+const Image = styled.img`
+    object-fit: cover;
     
     max-width: 940px;
     height: 70vh;
