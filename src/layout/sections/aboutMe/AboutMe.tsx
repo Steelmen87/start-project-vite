@@ -39,14 +39,17 @@ export const Title = styled.div<TitleProps>`
     text-align: center;
     padding: ${props => props.padding};
 `
-export const Description = styled.div`
+type DescriptionProps = {
+    maxWidth?: string
+}
+export const Description = styled.div<DescriptionProps>`
     font-weight: 400;
     font-size: 18px;
 
     line-height: 1.5;
     letter-spacing: 0;
     text-align: center;
-    max-width: 486px;
+    max-width: ${props => props.maxWidth || "486px"};
 
 
 `
