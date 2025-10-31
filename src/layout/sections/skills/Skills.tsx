@@ -57,12 +57,18 @@ const BlockSkills = styled.div`
     width: 100%;
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap;
+    @media screen and (max-width: 440px) {
+        justify-content:center;
+        flex-direction: column;
+    }
+
 `
 const Skill = styled.div`
     display: flex;
     flex-direction: column;
     align-items: center;
-
+    margin-bottom: 40px;
 `
 const Text = styled.div`
     width: 80px;

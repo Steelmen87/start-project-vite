@@ -15,7 +15,7 @@ export const Main = () => {
                     RU | ENG
                 </Language>
             </Text>
-            <Photo img={image}/>
+            <Photo src={image}/>
         </FlexWrapper>
     );
 };
@@ -31,9 +31,6 @@ const Text = styled.div`
     justify-content: space-between;
     align-items: center;
     padding: 40px 0;
-
-
-
 `
 const FIO = styled.div`
     width: 124px;
@@ -53,21 +50,15 @@ const Content = styled.div`
     letter-spacing: 0%;
 
 `
-type imageProps = {
-    img: any
-}
 
-const Photo = styled.img<imageProps>`
-    background-image: url(${props => props.img});
-    background-repeat: no-repeat;
-    background-size: cover;
+
+const Photo = styled.img`
+    object-fit: cover;
     height: 387px;
     width: 100%;
     max-width: 944px;
-
-    display: block;
     margin-bottom: 100px;
-    //todo ??? 2 string TOP
+    
 
 
 `

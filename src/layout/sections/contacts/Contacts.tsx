@@ -47,4 +47,5 @@ const Text = styled.div`
     line-height: 100%;
     text-align: center;
     width: 244px;
+  
 `

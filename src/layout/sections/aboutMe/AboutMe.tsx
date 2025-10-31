@@ -26,6 +26,7 @@ type StyledMeType = {
 export const StyledMe = styled.div<StyledMeType>`
     display: flex;
     justify-content: center;
+    align-items: center;
     width: 100vw;
     flex-direction: ${props => props.flexDirection || "row"};
 `
@@ -50,7 +51,10 @@ export const Description = styled.div<DescriptionProps>`
     letter-spacing: 0;
     text-align: center;
     max-width: ${props => props.maxWidth || "486px"};
-
+    @media screen and (max-width: 440px) {
+        font-size: 14px;
+        max-width:382px;
+    }
 
 `
 type FlexWrapperForAll = {

@@ -39,7 +39,12 @@ const WorkProject = styled.div`
     flex-direction: column;
     align-items: center;
     width: 100%;
+    max-width: 940px;
     margin-bottom: 100px;
+   /* @media screen and (max-width: 440px) {
+        
+    }*/
+
 `
 const Description = styled.div`
     font-weight: 400;
@@ -48,19 +53,22 @@ const Description = styled.div`
     text-decoration: underline;
     text-decoration-style: solid;
     text-decoration-thickness: 0;
-
 `
 type ImageType = {
     img: any
 }
 const Image = styled.img<ImageType>`
     background-image: url(${props => props.img});
-
     background-repeat: no-repeat;
     background-size: cover;
-    display: block;
+    
+    
     max-width: 940px;
-    height: 510px;
+    height: 70vh;
     width: 100%;
     margin-bottom: 44px;
+    @media screen and (max-width: 440px) {
+        height: 21vh;
+        max-width: 360px;
+    }
 `
